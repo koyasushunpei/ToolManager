@@ -25,7 +25,7 @@ __Do not modify or delete this file!!__
 
 
 # TODO
-Modify function
-Delete function
-Check function for duplicates
+Modify function  
+Delete function  
+Check function for duplicates  
 (Clean function)
