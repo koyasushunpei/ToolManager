@@ -13,7 +13,7 @@ import src.search as search # original
 def main():
     parser = argparse.ArgumentParser(
         prog='toolmanager.py',
-        usage='./toolmanager.py -argument',
+        usage='./toolmanager.py [options]',
         description='',
         epilog='',
         add_help=True,
