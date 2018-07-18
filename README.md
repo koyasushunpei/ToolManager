@@ -25,4 +25,7 @@ __Do not modify or delete this file!!__
 
 
 # TODO
-Make update or function to mofify tool information.
+Modify function
+Delete function
+Check function for duplicates
+(Clean function)
