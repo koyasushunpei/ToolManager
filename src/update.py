@@ -1,4 +1,5 @@
 import csv
+import datetime
 import src.delete as delete
 import src.output as output
 
@@ -8,6 +9,9 @@ def modify(modify_tool, new_tool, header, index):
 
     if(column_name == "Name"):
         new_tool.append(modify_tool[index])
+        return
+    if(column_name == "Date"):
+        new_tool.append(str(datetime.date.today()))
         return
     answer = input("Do you want to change {0}? [yN]".format(column_name))
     if not(answer == "Y" or answer == "y"):
@@ -60,7 +64,6 @@ def update(tool_name, form):
 
     for column in new_tool:
         column = column.replace(",", "%2C")
-    print(new_tool)
 
     delete.delete_by_update(tool_name)
 
