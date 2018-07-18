@@ -42,6 +42,7 @@ def keyword(word, form):
 
 
     if(match_counter):
+        print("--------------------------------------------------------")
         print("Hit {0} tools!".format(match_counter))
     else:
         print('No tool matched for "{0}"'.format(word))
