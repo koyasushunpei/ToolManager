@@ -1,5 +1,6 @@
 import csv
 import datetime
+import src.output as output
 
 def getToolInfo():
     print("========================================================")
@@ -15,6 +16,19 @@ def getToolInfo():
             tool_name = input("write something\t: ")
         else:
             break
+    # Check for duplicates
+    file = open('data/list.csv', 'r')
+    reader = csv.reader(file)
+    header = next(reader)
+
+    for row in reader:
+        if(row[0] == tool_name):
+            print("{0} is already exists in your list".format(tool_name))
+            print("--------------------------------------------------------")
+            output.output(row, True) # output full information
+            exit(0)
+
+
 
     # Tool Overview
     tool_overview = input("Summary of {0}\t: ".format(tool_name))
