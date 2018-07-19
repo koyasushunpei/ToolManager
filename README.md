@@ -33,7 +33,7 @@ optional arguments:
 ```
 ### search for tool by your input
 ```
-./toolmanager.py -s WORD # you can use reguler expression
+./toolmanager.py -s WORD (-l) # you can use reguler expression
 ```
 ### filter tool by keyword
 ```
@@ -41,7 +41,7 @@ optional arguments:
 ```
 ### dump all keywords
 ```
-./toolmanager.py --dumpkey (-l)
+./toolmanager.py --dumpkey
 ```
 ### update tool information
 ```
@@ -59,6 +59,9 @@ __Do not modify or delete this file!!__
 Main function is in toolmanager.py and other functions are in src/ directory
 
 
-
 # TODO
+Fix import function
 (Clean function)
+
+# Author
+[koyasushunpei](https://github.com/koyasushunpei)
