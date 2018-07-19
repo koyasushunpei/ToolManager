@@ -1,5 +1,5 @@
 import csv
-import src.output as output
+from src.output import output
 
 def dumpkey():
     print("========================================================")
@@ -37,7 +37,7 @@ def keyword(word, form):
 
     for row in reader:
         if(word in row[5].split(" ")):
-            output.output(row, form)
+            output(row, form)
             match_counter += 1
 
 

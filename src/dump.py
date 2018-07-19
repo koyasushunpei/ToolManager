@@ -1,5 +1,5 @@
 import csv
-import src.output as output
+from src.output import output
 import subprocess
 
 def dump(form):
@@ -22,4 +22,4 @@ def dump(form):
             exit(0)
 
     for row in reader:
-        output.output(row, form)
+        output(row, form)

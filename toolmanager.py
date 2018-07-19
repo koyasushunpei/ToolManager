@@ -2,13 +2,13 @@
 # -*- coding: utf-8 -*-
 
 import argparse
-import src.add as add # original
-import src.dump as dump # original
-import src.import_file as import_file # original
-import src.delete as delete # original
-import src.keyword as keyword # original
-import src.search as search # original
-import src.update as update # original
+from src.add import add # original
+from src.dump import dump # original
+from src.import_file import import_file # original
+from src.delete import delete # original
+from src.keyword import keyword, dumpkey # original
+from src.search import search # original
+from src.update import update # original
 
 
 def main():
@@ -36,21 +36,21 @@ def main():
         exit(0)
 
     if(args.deletetoolname):
-        delete.delete(args.deletetoolname)
+        delete(args.deletetoolname)
     elif(args.dump):
-        dump.dump(args.form)
+        dump(args.form)
     elif(args.dumpkey):
-        keyword.dumpkey()
+        dumpkey()
     elif(args.infile):
-        import_file.importFile(args.infile)
+        import_file(args.infile)
     elif(args.add):
-        add.add()
+        add()
     elif(args.keyword):
-        keyword.keyword(args.keyword, args.form)
+        keyword(args.keyword, args.form)
     elif(args.word):
-        search.search(args.word, args.form)
+        search(args.word, args.form)
     elif(args.updatetoolname):
-        update.update(args.updatetoolname, args.form)
+        update(args.updatetoolname, args.form)
 
 
 if __name__ == '__main__':

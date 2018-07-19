@@ -1,5 +1,5 @@
 import csv
-import src.output as output
+from src.output import output
 import re
 
 def search(word, form):
@@ -22,7 +22,7 @@ def search(word, form):
         for column in row:
             match = re.search(word, column)
             if match:
-                output.output(row, form)
+                output(row, form)
                 match_counter += 1
                 break
 

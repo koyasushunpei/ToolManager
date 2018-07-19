@@ -1,6 +1,6 @@
 import os
 
-def importFile(filename):
+def import_file(filename):
     if not(os.path.exists(filename)):
         print("File not exist")
         exit(0)

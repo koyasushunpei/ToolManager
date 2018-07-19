@@ -1,5 +1,5 @@
 import csv
-import src.output as output
+from src.output import output
 
 def check(tool_name, flag):
     file = open("data/list.csv", "r")
@@ -9,7 +9,7 @@ def check(tool_name, flag):
     for row in reader:
         if(row[0] == tool_name):
             if(flag):
-                output.output(row, True) # full information
+                output(row, True) # full information
             file_exist = True
             break
     if not(file_exist):

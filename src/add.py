@@ -1,6 +1,6 @@
 import csv
 import datetime
-import src.output as output
+from src.output import output
 
 def getToolInfo():
     print("========================================================")
@@ -25,7 +25,7 @@ def getToolInfo():
         if(row[0] == tool_name):
             print("{0} is already exists in your list".format(tool_name))
             print("--------------------------------------------------------")
-            output.output(row, True) # output full information
+            output(row, True) # output full information
             exit(0)
 
 

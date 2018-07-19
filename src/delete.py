@@ -1,25 +1,13 @@
 import csv
-import src.check as check
-import src.output as output
+from src.check import check
 
 def delete(tool_name):
     print("========================================================")
     print("=                     Delete tool                      =")
     print("========================================================")
     print("")
-    # file = open("data/list.csv", "r")
-    # reader = csv.reader(file)
-    # header = next(reader)
-    # file_exist = False
-    # for row in reader:
-    #     if(row[0] == tool_name):
-    #         output.output(row, True)
-    #         file_exist = True
-    #         break
-    # if not(file_exist):
-    #     print("Can't find {0}".format(tool_name))
-    #     exit(0)
-    check.check(tool_name, True) # output True
+
+    check(tool_name, True) # output True
 
     print("========================================================")
     print("=                       WARNING                        =")
