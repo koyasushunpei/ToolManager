@@ -1,11 +1,15 @@
 def output(row, form):
+    output_row = []
+    for column in row:
+        output_row.append(column.replace("%2C", ','))
+
     if(form):
-        print("{0}:".format(row[0].replace("%2C", ',')))
-        print("\tSummary: {0}".format(row[1].replace("%2C", ',')))
-        print("\tURL    : {0}".format(row[2].replace("%2C", ',')))
-        print("\tDate   : {0}".format(row[3].replace("%2C", ',')))
-        print("\tComment: {0}".format(row[4].replace("%2C", ',')))
-        print("\tKeyword: {0}".format(row[5].replace("%2C", ',')))
+        print("{0}:".format(output_row[0]))
+        print("\tSummary: {0}".format(output_row[1]))
+        print("\tURL    : {0}".format(output_row[2]))
+        print("\tDate   : {0}".format(output_row[3]))
+        print("\tComment: {0}".format(output_row[4]))
+        print("\tKeyword: {0}".format(output_row[5]))
         print("--------------------------------------------------------")
     else:
-        print("{0}\t: {1}".format(row[0].replace("%2C", ','), row[1].replace("%2C", ',')))
+        print("{0}\t: {1}".format(output_row[0], output_row[1]))
