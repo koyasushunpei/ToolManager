@@ -1,0 +1,10 @@
+.col-1 {
+    display: inline-block;
+    width: 70px;
+    /* border: solid 1px; */
+}
+.col-2 {
+    display: inline-block;
+    width: 200px;
+    /* border: solid 1px; */
+}
