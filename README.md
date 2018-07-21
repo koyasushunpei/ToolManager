@@ -19,6 +19,7 @@ optional arguments:
   --dumpkey             dump all keywords
   --import INFILE       import tool list from csv file
   -a, --add             add new tool
+  -e, --export          export tool list to html file
   -k KEYWORD, --keyword KEYWORD
                         filter by keyword
   -l                    dump tools with full information
@@ -55,6 +56,10 @@ optional arguments:
 ### delete tool from list
 ```
 ./toolmanager.py --delete TOOLNAME
+```
+### export tool list to html file
+```
+./toolmanager.py -e
 ```
 
 # Files
