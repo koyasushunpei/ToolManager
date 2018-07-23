@@ -14,13 +14,7 @@ from src.update import update # original
 
 
 def main():
-    # print("open file://%s in your browser" % (os.path.abspath("data/list.html")))
-
-    print(os.getcwd())
-    print(os.path.dirname(__file__))
-    os.chdir(os.path.dirname(__file__))
-    print(os.getcwd())
-
+    os.chdir(os.path.dirname(__file__)) # dirctory setting
 
     parser = argparse.ArgumentParser(
         prog='toolmanager.py',
