@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 
 import argparse
+import os
 from src.add import add # original
 from src.dump import dump # original
 from src.export import export #original
@@ -13,6 +14,14 @@ from src.update import update # original
 
 
 def main():
+    # print("open file://%s in your browser" % (os.path.abspath("data/list.html")))
+
+    print(os.getcwd())
+    print(os.path.dirname(__file__))
+    os.chdir(os.path.dirname(__file__))
+    print(os.getcwd())
+
+
     parser = argparse.ArgumentParser(
         prog='toolmanager.py',
         usage='./toolmanager.py [options]',
